@@ -20,12 +20,12 @@ function Home() {
   return (
     <div className="relative min-h-screen font-poppins text-white bg-[#0A0405]">
       {/* Hero Container with 8-Layer Cinematic Environment */}
-      <div className="relative overflow-hidden w-full">
+      <div className="relative overflow-hidden w-full min-h-screen flex flex-col justify-between">
         <HeroCinematicBackground activeIndex={activeIndex} />
 
-        <div className="relative z-10 flex flex-col min-h-screen">
+        <div className="relative z-10 flex flex-col min-h-screen justify-between">
           <Navbar />
-          <div className="flex-1 max-h-[90vh] overflow-hidden">
+          <div className="flex-1 w-full flex flex-col justify-center py-4">
             <HeroSection activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
           </div>
         </div>

@@ -15,11 +15,20 @@ html, body, #root {
   color: #ffffff;
   min-height: 100vh;
   scroll-behavior: smooth;
+  overflow-x: hidden !important;
+  width: 100%;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+}
+
+/* GPU Acceleration for smooth animations & zero jank */
+.will-change-transform {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* Custom scrollbar */
